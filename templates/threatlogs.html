@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Threat Logs</title>
+<style>
+    body { margin: 0; font-family: Arial, sans-serif; background-color: #f4f6f9; }
+    .header { background-color: #1a1f36; color: white; display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; }
+    .header h1 { font-size: 20px; margin: 0; }
+    .status { padding: 5px 10px; border-radius: 5px; font-weight: bold; background-color: green; }
+    .user-info { display: flex; align-items: center; gap: 10px; }
+    .sidebar { background-color: #252b43; color: white; width: 220px; height: calc(100vh - 50px); position: fixed; top: 50px; left: 0; padding-top: 20px; }
+    .sidebar ul { list-style: none; padding: 0; }
+    .sidebar ul li { padding: 12px 20px; cursor: pointer; }
+    .sidebar ul li a { text-decoration: none; color: white; display: block; }
+    .sidebar ul li:hover { background-color: #1a1f36; }
+    .main { margin-left: 240px; padding: 20px; }
+    h2 { margin-top: 0; margin-bottom: 20px; }
+    table { width: 100%; border-collapse: collapse; background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    th, td { padding: 12px; border-bottom: 1px solid #ddd; text-align: left; }
+    th { background-color: #252b43; color: white; }
+    tr:hover { background-color: #f1f1f1; }
+</style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>CyberSentinel – Autonomous Threat Defense</h1>
+        <div class="user-info">
+            <span class="status">Active</span>
+            <span id="datetime"></span>
+            <img src="https://via.placeholder.com/30" alt="User" style="border-radius:50%;">
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="{{ url_for('dashboard') }}">Dashboard Overview</a></li>
+            <li><a href="{{ url_for('threatlogs') }}">Threat Logs</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        <h2>Threat Logs</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Event ID</th>
+                    <th>User</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for a in anomalies %}
+                <tr>
+                    <td>{{ a.timestamp }}</td>
+                    <td>{{ a.event_id }}</td>
+                    <td>{{ a.user }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Script for datetime -->
+    <script>
+        function updateDateTime() {
+            document.getElementById("datetime").textContent = new Date().toLocaleString();
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+</body>
+</html>

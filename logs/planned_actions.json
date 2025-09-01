@@ -1,0 +1,13 @@
+[
+    {
+        "timestamp": "2025-08-30 14:29:44",
+        "threat_type": "unauthorized user creation",
+        "action": "Delete user testuser",
+        "status": "planned",
+        "log": {
+            "user": "testuser"
+        },
+        "explanation": "The Windows Security Event Log indicates the user \"testuser\" attempted to login with a failed attempt (4720), which resulted in the SID \"LAPTOP-UBGNDOH5\", SID \"3856843758\", and process ID \"S-1-5-21-3856843758-3301451795-1705114592-1020\". The log also mentions a suspicious process, with SIDs \"S-1-5-21-3856843758-3301451795-1705114592-1001\", \"nikil\", and \"%%1793\".",
+        "event_id": 4720
+    }
+]

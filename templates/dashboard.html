@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberSentinel – Autonomous Threat Defense</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+    body { margin: 0; font-family: Arial, sans-serif; background-color: #f4f6f9; }
+    .header { background-color: #1a1f36; color: white; display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; }
+    .header h1 { font-size: 20px; margin: 0; }
+    .status { padding: 5px 10px; border-radius: 5px; font-weight: bold; background-color: green; }
+    .user-info { display: flex; align-items: center; gap: 10px; }
+    .sidebar { background-color: #252b43; color: white; width: 220px; height: calc(100vh - 50px); position: fixed; top: 50px; left: 0; padding-top: 20px; }
+    .sidebar ul { list-style: none; padding: 0; }
+    .sidebar ul li { padding: 12px 20px; cursor: pointer; }
+    .sidebar ul li a {text-decoration : None; color:white}
+    .sidebar ul li:hover { background-color: #1a1f36; }
+    .main { margin-left: 240px; padding: 20px; }
+    .cards { display: flex; gap: 20px; }
+    .card { background-color: white; flex: 1; padding: 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: center; }
+    .card h2 { margin: 0; font-size: 28px; }
+    .chart { background-color: white; margin-top: 20px; margin-bottom: 20px; padding: 20px; height: 350px; width: 750px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .chart canvas { width: 100% !important; height: 100% !important; }
+    table { width: 100%; margin-top: 20px; border-collapse: collapse; background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    th, td { padding: 12px; border-bottom: 1px solid #ddd; text-align: left; }
+    th { background-color: #252b43; color: white; }
+    tr:hover { background-color: #f1f1f1; }
+    .footer { margin-top: 20px; text-align: center; font-size: 12px; color: gray; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <h1>CyberSentinel – Autonomous Threat Defense</h1>
+    <div class="user-info">
+        <span class="status">Active</span>
+        <span id="datetime"></span>
+        <img src="https://via.placeholder.com/30" alt="User" style="border-radius:50%;">
+    </div>
+</div>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <ul>
+        <li>Dashboard Overview</li>
+        <li><a href="{{ url_for('threatlogs') }}">Threat Logs</a></li>
+    </ul>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+    <!-- Summary Cards -->
+    <div class="cards">
+        <div class="card" style="border-left:5px solid red;">
+            <h2>{{ total_threats }}</h2>
+            <p>Total Threats Detected</p>
+        </div>
+        <div class="card" style="border-left:5px solid orange;">
+            <h2>{{ active_threats }}</h2>
+            <p>Active Threats</p>
+        </div>
+        <div class="card" style="border-left:5px solid green;">
+            <h2>{{ resolved_threats }}</h2>
+            <p>Resolved Threats</p>
+        </div>
+    </div>
+
+    <!-- Threat Graph -->
+    <div class="chart">
+        <canvas id="threatTimeline"></canvas>
+    </div>
+
+    <!-- Threat Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Timestamp</th>
+                <th>Event ID</th>
+                <th>Threat Type</th>
+                <th>AI Explanation</th>
+                <th>Action Taken</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for a in actions %}
+            <tr style="color:{% if a.status == 'executed' %}red{% elif a.status == 'not_mapped' %}orange{% else %}green{% endif %};">
+                <td>{{ a.timestamp }}</td>
+                <td>{{ a.event_id or "N/A" }}</td>
+                <td>{{ a.threat_type }}</td>
+                <td>{{ a.explanation or "N/A" }}</td>
+                <td>{{ a.action }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2025 CyberSentinel | Version 1.0
+    </div>
+</div>
+
+<!-- Scripts -->
+<script>
+    // Auto-update datetime
+    function updateDateTime() {
+        document.getElementById("datetime").textContent = new Date().toLocaleString();
+    }
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+
+    // Chart.js Threat Timeline
+    const ctx = document.getElementById('threatTimeline').getContext('2d');
+    const threatTimelineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: {{ chart_labels|tojson }},
+            datasets: [{
+                label: 'Threats Detected',
+                data: {{ chart_data|tojson }},
+                borderColor: 'red',
+                backgroundColor: 'rgba(255, 0, 0, 0.1)',
+                fill: true,
+                tension: 0.3,
+                pointBackgroundColor: 'red'
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: { legend: { display: true, labels: { color: '#333' } } },
+            scales: { x: { ticks: { color: '#333' } }, y: { beginAtZero: true, ticks: { color: '#333' } } }
+        }
+    });
+</script>
+</body>
+</html>

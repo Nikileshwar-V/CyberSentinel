@@ -1,0 +1,121 @@
+[
+    {
+        "timestamp": "Sat Aug 30 14:42:04 2025",
+        "datetime_obj": "2025-08-30T14:42:04",
+        "event_id": 4625,
+        "user": "testuser",
+        "event_message": "('S-1-5-18', 'LAPTOP-UBGNDOH5$', 'WORKGROUP', '0x3e7', 'S-1-0-0', 'testuser', 'LAPTOP-UBGNDOH5', '0xc000006d', '%%2313', '0xc000006a', '2', 'User32 ', 'Negotiate', 'LAPTOP-UBGNDOH5', '-', '-', '0', '0x8ec', 'C:\\\\Windows\\\\System32\\\\svchost.exe', '127.0.0.1', '0')"
+    },
+    {
+        "timestamp": "Sat Aug 30 14:42:02 2025",
+        "datetime_obj": "2025-08-30T14:42:02",
+        "event_id": 4625,
+        "user": "testuser",
+        "event_message": "('S-1-5-18', 'LAPTOP-UBGNDOH5$', 'WORKGROUP', '0x3e7', 'S-1-0-0', 'testuser', 'LAPTOP-UBGNDOH5', '0xc000006d', '%%2313', '0xc000006a', '2', 'User32 ', 'Negotiate', 'LAPTOP-UBGNDOH5', '-', '-', '0', '0x8ec', 'C:\\\\Windows\\\\System32\\\\svchost.exe', '127.0.0.1', '0')"
+    },
+    {
+        "timestamp": "Sat Aug 30 14:42:01 2025",
+        "datetime_obj": "2025-08-30T14:42:01",
+        "event_id": 4625,
+        "user": "testuser",
+        "event_message": "('S-1-5-18', 'LAPTOP-UBGNDOH5$', 'WORKGROUP', '0x3e7', 'S-1-0-0', 'testuser', 'LAPTOP-UBGNDOH5', '0xc000006d', '%%2313', '0xc000006a', '2', 'User32 ', 'Negotiate', 'LAPTOP-UBGNDOH5', '-', '-', '0', '0x8ec', 'C:\\\\Windows\\\\System32\\\\svchost.exe', '127.0.0.1', '0')"
+    },
+    {
+        "timestamp": "Sat Aug 30 14:29:44 2025",
+        "datetime_obj": "2025-08-30T14:29:44",
+        "event_id": 4720,
+        "user": "testuser",
+        "event_message": "('testuser', 'LAPTOP-UBGNDOH5', 'S-1-5-21-3856843758-3301451795-1705114592-1020', 'S-1-5-21-3856843758-3301451795-1705114592-1001', 'nikil', 'LAPTOP-UBGNDOH5', '0x96a08', '-', 'testuser', '%%1793', '-', '%%1793', '%%1793', '%%1793', '%%1793', '%%1793', '%%1794', '%%1794', '513', '-', '0x0', '0x15', '\\r\\n\\t\\t%%2080\\r\\n\\t\\t%%2082\\r\\n\\t\\t%%2084', '%%1793', '-', '%%1797')"
+    },
+    {
+        "timestamp": "Sat Aug 30 14:13:55 2025",
+        "datetime_obj": "2025-08-30T14:13:55",
+        "event_id": 4688,
+        "user": "Unknown",
+        "event_message": "('S-1-5-18', '-', '-', '0x3e7', '0x4c4', 'C:\\\\Windows\\\\System32\\\\lsass.exe', '%%1936', '0x414', '', 'S-1-0-0', '-', '-', '0x0', 'C:\\\\Windows\\\\System32\\\\wininit.exe', 'S-1-16-16384')"
+    },
+    {
+        "timestamp": "Sat Aug 30 14:13:55 2025",
+        "datetime_obj": "2025-08-30T14:13:55",
+        "event_id": 4688,
+        "user": "Unknown",
+        "event_message": "('S-1-5-18', '-', '-', '0x3e7', '0x4b8', 'C:\\\\Windows\\\\System32\\\\LsaIso.exe', '%%1936', '0x414', '', 'S-1-0-0', '-', '-', '0x0', 'C:\\\\Windows\\\\System32\\\\wininit.exe', 'S-1-16-16384')"
+    },
+    {
+        "timestamp": "Sat Aug 30 14:13:55 2025",
+        "datetime_obj": "2025-08-30T14:13:55",
+        "event_id": 4688,
+        "user": "Unknown",
+        "event_message": "('S-1-5-18', '-', '-', '0x3e7', '0x4a4', 'C:\\\\Windows\\\\System32\\\\services.exe', '%%1936', '0x414', '', 'S-1-0-0', '-', '-', '0x0', 'C:\\\\Windows\\\\System32\\\\wininit.exe', 'S-1-16-16384')"
+    },
+    {
+        "timestamp": "Sat Aug 30 14:13:55 2025",
+        "datetime_obj": "2025-08-30T14:13:55",
+        "event_id": 4688,
+        "user": "Unknown",
+        "event_message": "('S-1-5-18', '-', '-', '0x3e7', '0x474', 'C:\\\\Windows\\\\System32\\\\winlogon.exe', '%%1936', '0x40c', '', 'S-1-0-0', '-', '-', '0x0', 'C:\\\\Windows\\\\System32\\\\smss.exe', 'S-1-16-16384')"
+    },
+    {
+        "timestamp": "Sat Aug 30 14:13:55 2025",
+        "datetime_obj": "2025-08-30T14:13:55",
+        "event_id": 4688,
+        "user": "Unknown",
+        "event_message": "('S-1-5-18', '-', '-', '0x3e7', '0x420', 'C:\\\\Windows\\\\System32\\\\csrss.exe', '%%1936', '0x40c', '', 'S-1-0-0', '-', '-', '0x0', 'C:\\\\Windows\\\\System32\\\\smss.exe', 'S-1-16-16384')"
+    },
+    {
+        "timestamp": "Sat Aug 30 14:13:55 2025",
+        "datetime_obj": "2025-08-30T14:13:55",
+        "event_id": 4688,
+        "user": "Unknown",
+        "event_message": "('S-1-5-18', '-', '-', '0x3e7', '0x414', 'C:\\\\Windows\\\\System32\\\\wininit.exe', '%%1936', '0x330', '', 'S-1-0-0', '-', '-', '0x0', 'C:\\\\Windows\\\\System32\\\\smss.exe', 'S-1-16-16384')"
+    },
+    {
+        "timestamp": "Sat Aug 30 14:13:55 2025",
+        "datetime_obj": "2025-08-30T14:13:55",
+        "event_id": 4688,
+        "user": "Unknown",
+        "event_message": "('S-1-5-18', '-', '-', '0x3e7', '0x40c', 'C:\\\\Windows\\\\System32\\\\smss.exe', '%%1936', '0x2a4', '', 'S-1-0-0', '-', '-', '0x0', 'C:\\\\Windows\\\\System32\\\\smss.exe', 'S-1-16-16384')"
+    },
+    {
+        "timestamp": "Sat Aug 30 14:13:55 2025",
+        "datetime_obj": "2025-08-30T14:13:55",
+        "event_id": 4688,
+        "user": "Unknown",
+        "event_message": "('S-1-5-18', '-', '-', '0x3e7', '0x26c', 'C:\\\\Windows\\\\System32\\\\csrss.exe', '%%1936', '0x330', '', 'S-1-0-0', '-', '-', '0x0', 'C:\\\\Windows\\\\System32\\\\smss.exe', 'S-1-16-16384')"
+    },
+    {
+        "timestamp": "Sat Aug 30 14:13:46 2025",
+        "datetime_obj": "2025-08-30T14:13:46",
+        "event_id": 4688,
+        "user": "Unknown",
+        "event_message": "('S-1-5-18', '-', '-', '0x3e7', '0x330', 'C:\\\\Windows\\\\System32\\\\smss.exe', '%%1936', '0x2a4', '', 'S-1-0-0', '-', '-', '0x0', 'C:\\\\Windows\\\\System32\\\\smss.exe', 'S-1-16-16384')"
+    },
+    {
+        "timestamp": "Sat Aug 30 14:13:45 2025",
+        "datetime_obj": "2025-08-30T14:13:45",
+        "event_id": 4688,
+        "user": "Unknown",
+        "event_message": "('S-1-5-18', '-', '-', '0x3e7', '0x2bc', 'C:\\\\Windows\\\\System32\\\\autochk.exe', '%%1936', '0x2a4', '', 'S-1-0-0', '-', '-', '0x0', 'C:\\\\Windows\\\\System32\\\\smss.exe', 'S-1-16-16384')"
+    },
+    {
+        "timestamp": "Sat Aug 30 14:13:44 2025",
+        "datetime_obj": "2025-08-30T14:13:44",
+        "event_id": 4688,
+        "user": "Unknown",
+        "event_message": "('S-1-5-18', '-', '-', '0x3e7', '0x2a4', 'C:\\\\Windows\\\\System32\\\\smss.exe', '%%1936', '0x4', '', 'S-1-0-0', '-', '-', '0x0', '', 'S-1-16-16384')"
+    },
+    {
+        "timestamp": "Sat Aug 30 14:13:44 2025",
+        "datetime_obj": "2025-08-30T14:13:44",
+        "event_id": 4688,
+        "user": "Unknown",
+        "event_message": "('S-1-5-18', '-', '-', '0x3e7', '0xb8', 'Registry', '%%1936', '0x4', '', 'S-1-0-0', '-', '-', '0x0', '', 'S-1-16-16384')"
+    },
+    {
+        "timestamp": "Sat Aug 30 14:13:44 2025",
+        "datetime_obj": "2025-08-30T14:13:44",
+        "event_id": 4688,
+        "user": "Unknown",
+        "event_message": "('S-1-5-18', '-', '-', '0x3e7', '0x8c', '', '%%1936', '0x4', '', 'S-1-0-0', '-', '-', '0x0', '', 'S-1-16-16384')"
+    }
+]

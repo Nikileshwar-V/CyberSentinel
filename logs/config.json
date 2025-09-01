@@ -1,0 +1,6 @@
+{
+    "theme": "dark",
+    "refresh_interval": 10,
+    "auto_mitigation": false,
+    "alerts": "email"
+}

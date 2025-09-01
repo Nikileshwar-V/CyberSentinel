@@ -1,0 +1,11 @@
+[
+    {
+        "timestamp": "2025-08-30 14:29:44",
+        "datetime_obj": "2025-08-30T14:29:44",
+        "event_id": 4720,
+        "user": "testuser",
+        "event_message": "('testuser', 'LAPTOP-UBGNDOH5', 'S-1-5-21-3856843758-3301451795-1705114592-1020', 'S-1-5-21-3856843758-3301451795-1705114592-1001', 'nikil', 'LAPTOP-UBGNDOH5', '0x96a08', '-', 'testuser', '%%1793', '-', '%%1793', '%%1793', '%%1793', '%%1793', '%%1793', '%%1794', '%%1794', '513', '-', '0x0', '0x15', '\\r\\n\\t\\t%%2080\\r\\n\\t\\t%%2082\\r\\n\\t\\t%%2084', '%%1793', '-', '%%1797')",
+        "explanation": "The Windows Security Event Log indicates the user \"testuser\" attempted to login with a failed attempt (4720), which resulted in the SID \"LAPTOP-UBGNDOH5\", SID \"3856843758\", and process ID \"S-1-5-21-3856843758-3301451795-1705114592-1020\". The log also mentions a suspicious process, with SIDs \"S-1-5-21-3856843758-3301451795-1705114592-1001\", \"nikil\", and \"%%1793\".",
+        "threat_type": "Unauthorized User Creation"
+    }
+]

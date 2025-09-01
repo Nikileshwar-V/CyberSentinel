@@ -1,0 +1,16 @@
+[
+  {
+    "timestamp": "2025-06-23T12:34:56Z",
+    "source_ip": "192.168.1.45",
+    "dest_ip": "8.8.8.8",
+    "port": 22,
+    "event": "Failed SSH Login"
+  },
+  {
+    "timestamp": "2025-06-23T12:35:12Z",
+    "source_ip": "192.168.1.99",
+    "dest_ip": "192.168.1.10",
+    "port": 3389,
+    "event": "RDP Connection Attempt"
+  }
+]
